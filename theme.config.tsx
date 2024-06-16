@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next';
+import Script from 'next/script'
 
 import { DocsThemeConfig, Tabs, Tab } from 'nextra-theme-docs';
 
@@ -7,6 +8,15 @@ import { Logo } from './components/logo';
 
 const config: DocsThemeConfig = {
   logo: () => <Logo />,
+  head: () => (
+    <>
+      <Script
+        async
+        src={process.env.NEXT_PUBLIC_ANALYTICS_URL}
+        data-website-id={process.env.NEXT_PUBLIC_ANALYTICS_ID}
+      />
+    </>
+  ),
   useNextSeoProps: () => ({
     titleTemplate: '%s - SecNex',
   }),
