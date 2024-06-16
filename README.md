@@ -1,23 +1,32 @@
-# Nextra Docs Template 
+<div style="padding-bottom: 20px;">
+    <img src='.github'>
+</div>
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+# SecNex Documentation
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
+SecNex is an innovative initiative specifically designed to equip administrators with advanced tools and platforms focusing on artificial intelligence (AI) and IT security. Our goal is to revolutionize the management and administration of various systems and platforms, while enhancing efficiency and security. By integrating cutting-edge AI technologies, we aim to streamline processes and proactively address challenges in IT security. With SecNex, you are investing in a future where administration is not only simpler and faster, but also significantly safer.
 
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
+## Installation
 
-## Quick Start
+To install the secnex docs locally, you can follow these steps:
 
-Click the button to clone this repository and deploy it on Vercel:
+### Clone the repository
 
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
+```bash
+git clone https://github.com/secnex/docs.git
+```
 
-## Local Development
+### Install dependencies
 
-First, run `pnpm i` to install the dependencies.
+```bash
+cd docs
+pnpm install --frozen-lockfile
+```
 
-Then, run `pnpm dev` to start the development server and visit localhost:3000.
+### Run the development server
 
-## License
+```bash
+pnpm dev
+```
 
-This project is licensed under the MIT License.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

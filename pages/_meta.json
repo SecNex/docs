@@ -1,15 +1,37 @@
 {
-  "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
-  "about": {
-    "title": "About",
+  "index": {
+    "title": "Home",
+    "type": "page",
+    "theme": {
+      "layout": "raw"
+    }
+  },
+  "edgesight": {
+    "title": "EdgeSight",
+    "type": "page",
+    "display": "hidden"
+  },
+  "headless-player": {
+    "title": "Headless Player",
+    "type": "page",
+    "display": "hidden"
+  },
+  "suite": {
+    "title": "Suite",
     "type": "page"
   },
-  "contact": {
-    "title": "Contact ↗",
-    "type": "page",
-    "href": "https://twitter.com/shuding_",
-    "newWindow": true
+  "solutions": {
+    "title": "Solutions",
+    "type": "menu",
+    "items": {
+      "edgesight": {
+        "title": "EdgeSight",
+        "href": "/edgesight"
+      },
+      "headless-player": {
+        "title": "Headless Player",
+        "href": "/headless-player"
+      }
+    }
   }
 }

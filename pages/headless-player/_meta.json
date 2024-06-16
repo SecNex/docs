@@ -1,0 +1,15 @@
+{
+    "--- Headless Player": {
+        "title": "Headless Player",
+        "type": "separator"
+    },
+    "index": "Introduction",
+    "self-hosted": "Self-Hosted",
+    "--- Integrations": {
+        "title": "Integrations",
+        "type": "separator"
+    },
+    "powerbi": {
+        "title": "Power BI"
+    }
+}
