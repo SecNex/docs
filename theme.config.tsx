@@ -10,11 +10,7 @@ const config: DocsThemeConfig = {
   logo: () => <Logo />,
   head: () => (
     <>
-      <Script
-        async
-        src={process.env.NEXT_PUBLIC_ANALYTICS_URL}
-        data-website-id={process.env.NEXT_PUBLIC_ANALYTICS_ID}
-      />
+      <script defer src="https://analytics.secnex.io/script.js" data-website-id="91699484-47b9-412c-88f6-109f96989f39"></script>
     </>
   ),
   useNextSeoProps: () => ({

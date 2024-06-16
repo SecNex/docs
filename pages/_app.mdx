@@ -2,5 +2,8 @@ import '@styles/globals.css'
 import React from 'react'
 
 export default function MyApp({ Component, pageProps }) {
+    console.log('MyApp')
+    console.log(process.env.NEXT_PUBLIC_ANALYTICS_ID)
+    console.log(process.env.NEXT_PUBLIC_ANALYTICS_URL)
     return <Component {...pageProps} />
 }
