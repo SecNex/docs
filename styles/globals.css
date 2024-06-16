@@ -6,6 +6,10 @@
   font-weight: bold;
 }
 
-.normalLine {
-  line-height: 1.5;
+.normal-line {
+  line-height: 1.2;
+}
+
+.mini-line {
+  line-height: 1.0;
 }

@@ -19,7 +19,7 @@ export const Home = () => {
                             <span>The beginning of a new era will start soon.</span>
                         </div>
                     </div>
-                    <div className="flex text-[50px] lg:text-[70px] font-black bg-clip-text text-transparent bg-gradient-to-b from-zinc-100 to-zinc-500 text-center py-6 justify-center normalLine">
+                    <div className="flex text-[50px] lg:text-[70px] font-black bg-clip-text text-transparent bg-gradient-to-b from-zinc-100 to-zinc-500 text-center py-6 justify-center normal-line">
                         Security Suite
                     </div>
                     <div className="flex flex-row space-x-5 justify-center font-medium text-zinc-100">
@@ -68,7 +68,7 @@ export const Home = () => {
             </div>
             <div className="pb-10">
                 <div className="pb-10">
-                    <div className="bold text-[25px] lg:text-[35spx] bg-clip-text text-transparent bg-gradient-to-b from-zinc-100 to-zinc-500 text-center py-3">
+                    <div className="bold text-[25px] lg:text-[35spx] bg-clip-text text-transparent bg-gradient-to-b from-zinc-100 to-zinc-500 text-center py-3 mini-line">
                         The rest of the site will be available soon. Stay tuned!
                     </div>
                 </div>
