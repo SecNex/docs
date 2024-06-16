@@ -19,7 +19,7 @@ export const Home = () => {
                             <span>The beginning of a new era will start soon.</span>
                         </div>
                     </div>
-                    <div className="flex text-[50px] lg:text-[70px] font-black bg-clip-text text-transparent bg-gradient-to-b from-zinc-100 to-zinc-500 text-center py-6 justify-center">
+                    <div className="flex text-[50px] lg:text-[70px] font-black bg-clip-text text-transparent bg-gradient-to-b from-zinc-100 to-zinc-500 text-center py-6 justify-center normalLine">
                         Security Suite
                     </div>
                     <div className="flex flex-row space-x-5 justify-center font-medium text-zinc-100">

@@ -5,3 +5,7 @@
 .bold {
   font-weight: bold;
 }
+
+.normalLine {
+  line-height: 1.5;
+}
