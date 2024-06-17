@@ -1,34 +1,21 @@
+---
+title: Headless Player
+---
+
 import { Callout, Card, Cards, Steps, Tabs } from 'nextra/components'
 
-# Introduction
+# Headless Player 
 
-**Headless Player** by [SecNex](https://secnex.io) is a powerful tool that allow to stream screenshots of any website in real-time without any browse-engine dependencies. It is a standalone tool that can be used in any environment, including serverless functions, Docker containers, and more.
+**Headless Player** is part of **EdgeSight**, a suite for digital signage. It is a standalone player that can be used to screenshot everything that you can browse on the web. It is a headless browser that can be controlled via a REST API.
 
-You can use the cloud-hosted version of the **Headless Player** in the [EdgeSight](https://edgesight.io) digital signage solution by SecNex or self-host it on your own server or cloud provider.
+## Features
 
-<Callout type="warning">
-    **Headless Player** is currently in alpha stage and at this time not available in the cloud. We are working hard to make it available as soon as possible.
-</Callout>
+### Content Delegation
 
-## API for Developers
+You can delegate the content to be displayed on the player to a remote server. This way, you can control the content from a central location. Every player can display different content.
 
-The **Headless Player** API is a RESTful API that allows you to interact with the **Headless Player**. You can use the API to start and stop the player, get the status of the player, and more. With the API, you can easily integrate the **Headless Player** into your own applications and workflows.
+Every player can communicate with the REST API to get the content configuration. The content can be a URL, a locak HTML file or a implemented template or service (e.g. PowerBI).
 
-## EdgeSight Integration
+### Full control
 
-The **Headless Player** is integrated in EdgeSight, the secure digital signage solution by SecNex. In this combination, you can manage the content with EdgeSight on your EdgeSight players and diplays and use the **Headless Player** to show any website without any browser-engine dependencies on your devices.
-
-<Callout type="info">
-    At this time the **Headless Player** is only available for internal use. If you are interested in using the **Headless Player** in your own applications or your **EdgeSight** tenant, please contact us.
-</Callout>
-
-## Features in Development
-
-We are working on the following features for the **Headless Player**:
-
-- Cloud-hosted version with EdgeSight
-- Admin Dashboard for managing the **Headless Player** without knowledge of the API or the EdgeSight integration
-- More settings for the **Headless Player** like the browser engine, the resolution, and more
-- More integrations with other SecNex products like **SecNex AI** and **SecNex Security**
-
-If you have any feature requests or ideas for the **Headless Player**, please contact us. We are always looking for feedback and ideas to improve our products.
+You can control the player complete remotely. Each player will have a unique ID that you can use to control it. So you can configure the viewports, the refresh rate, the content, etc.
