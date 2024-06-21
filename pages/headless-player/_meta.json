@@ -5,6 +5,7 @@
     },
     "index": "Introduction",
     "self-hosted": "Self-Hosted",
+    "server": "Server",
     "--- Integrations": {
         "title": "Integrations",
         "type": "separator"
