@@ -1,7 +1,8 @@
 {
-    "--- EdgeSight ---": {
+    "--- EdgeSight": {
         "title": "EdgeSight",
         "type": "separator"
     },
-    "index": "Introduction"
+    "index": "Introduction",
+    "headless-player": "Headless Player"
 }
