@@ -27,6 +27,10 @@
       "edgesight": {
         "title": "EdgeSight",
         "href": "/edgesight"
+      },
+      "zerorest": {
+        "title": "ZeroRest",
+        "href": "/zerorest"
       }
     }
   }
