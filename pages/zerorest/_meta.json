@@ -4,5 +4,9 @@
         "type": "separator"
     },
     "index": "Introduction",
+    " --- ZeroRest Security": {
+        "title": "Security",
+        "type": "separator"
+    },
     "auth": "Authentication"
 }
