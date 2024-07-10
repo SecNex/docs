@@ -3,5 +3,6 @@
         "title": "ZeroRest",
         "type": "separator"
     },
-    "index": "Introduction"
+    "index": "Introduction",
+    "auth": "Authentication"
 }
