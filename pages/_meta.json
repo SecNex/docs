@@ -11,19 +11,14 @@
     "type": "page",
     "display": "hidden"
   },
-  "headless-player": {
-    "title": "Headless Player",
+  "zerorest": {
+    "title": "ZeroRest",
     "type": "page",
     "display": "hidden"
   },
   "suite": {
     "title": "Suite",
     "type": "page"
-  },
-  "zerorest": {
-    "title": "ZeroRest",
-    "type": "page",
-    "display": "hidden"
   },
   "solutions": {
     "title": "Solutions",
