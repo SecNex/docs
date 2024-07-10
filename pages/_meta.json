@@ -20,6 +20,11 @@
     "title": "Suite",
     "type": "page"
   },
+  "zerorest": {
+    "title": "ZeroRest",
+    "type": "page",
+    "display": "hidden"
+  },
   "solutions": {
     "title": "Solutions",
     "type": "menu",
