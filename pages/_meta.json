@@ -16,6 +16,11 @@
     "type": "page",
     "display": "hidden"
   },
+  "tb": {
+    "title": "Toolbox",
+    "type": "page",
+    "display": "hidden"
+  },
   "suite": {
     "title": "Suite",
     "type": "page"
@@ -31,6 +36,16 @@
       "zerorest": {
         "title": "ZeroRest",
         "href": "/zerorest"
+      }
+    }
+  },
+  "toolbox": {
+    "title": "Toolbox",
+    "type": "menu",
+    "items": {
+      "microsoft-teams": {
+        "title": "Microsoft Teams",
+        "href": "/tb/microsoft-teams"
       }
     }
   }

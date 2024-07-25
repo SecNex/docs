@@ -1,0 +1,11 @@
+{
+    "--- Toolbox": {
+        "title": "Toolbox",
+        "type": "separator"
+    },
+    "--- Microsoft": {
+        "title": "Microsoft",
+        "type": "separator"
+    },
+    "microsoft-teams": "Microsoft Teams"
+}

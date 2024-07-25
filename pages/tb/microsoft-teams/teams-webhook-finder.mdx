@@ -1,0 +1,75 @@
+import { Callout } from 'nextra/components'
+import { Steps } from 'nextra/components'
+import { Tabs } from 'nextra/components'
+
+# Teams Webhook Finder
+
+<Callout type="warning" emoji="⚠️">
+    This feature will be deprecated on December 31, 2025. For more information, see <a href="https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/">"Retirement of Office 365 connectors within Microsoft Teams"</a>.
+</Callout>
+
+To find teams where specific connectors are used, you can use the executable application `Teams Webhook Finder`. This application is available on GitHub and can be used to find teams where specific connectors are used. Currently, the application searches only for connectors that are used in the `Incoming Webhook` tabs.
+
+## Prerequisites
+
+### Create enterprise application
+
+1. Go to the [Entra ID](https://entra.microsoft.com) portal.
+2. Click on the `Enterprise applications` tab.
+3. Click on the `New application` button.
+4. Enter the name of the application and click on the `Create` button.
+5. Switch to the `App registrations` tab.
+6. Select the application you created.
+7. Copy the `Application (client) ID` and `Directory (tenant) ID` values.
+8. Click on the `Certificates & secrets` tab.
+9. Click on the `New client secret` button.
+10. Enter the description and click on the `Add` button.
+11. Copy the `Value` value.
+12. Click on the `API permissions` tab.
+13. Click on the `Add a permission` button.
+14. Select the `Microsoft Graph` API.
+15. Select the `Application permissions` option.
+16. Add the following permissions:
+    - `AppCatalog.Read.All`
+    - `Team.ReadBasic.All`
+    - `TeamAppInstallation.ReadForTeam.All`
+17. Give admin consent for the permissions.
+
+## Usage
+
+<Steps>
+### Download the latest release
+ 
+Download the latest release from the [GitHub repository](https://github.com/SecNex/teams-webhook-finder/releases).
+ 
+### Create a configuration file
+ 
+Create a configuration file named `config.json` with the following content:
+ 
+```json
+{
+    "client": {
+        "client_id": "YOUR_CLIENT_ID",
+        "client_secret": "YOUR_CLIENT_SECRET",
+        "tenant_id": "YOUR_TENANT_ID"
+    } 
+}
+```
+
+### Run the application
+
+Run the application with the following command:
+
+<Tabs items={['windows', 'unix']}>
+    <Tabs.Tab>
+    ```powershell
+    .\teams-webhook-finder.exe
+    ```
+    </Tabs.Tab>
+    <Tabs.Tab>
+    ```bash
+    ./teams-webhook-finder
+    ```
+    </Tabs.Tab>
+</Tabs>
+</Steps>
