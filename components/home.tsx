@@ -19,13 +19,13 @@ export const Home = () => {
                             <span>The beginning of a new era will start soon.</span>
                         </div>
                     </div>
-                    <div className="flex text-[50px] lg:text-[70px] font-black bg-clip-text text-transparent bg-gradient-to-b from-zinc-100 to-zinc-500 text-center py-6 justify-center normal-line">
+                    <div className="flex text-[50px] lg:text-[70px] font-black bg-clip-text text-transparent bg-gradient-to-b from-zinc-500 dark:from-zinc-100 to-zinc-900 dark:to-zinc-500 text-center py-6 justify-center normal-line">
                         Security Suite
                     </div>
                     <div className="flex flex-row space-x-5 justify-center font-medium text-zinc-100">
                         <a
                             href="/suite"
-                            className="p-2 px-5 bg-zinc-50 rounded-md text-zinc-900"
+                            className="p-2 px-5 dark:bg-zinc-50 bg-zinc-900 rounded-md text-zinc-50 dark:text-zinc-900"
                         >
                             Documentation
                         </a>
