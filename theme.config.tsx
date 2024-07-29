@@ -10,7 +10,7 @@ const config: DocsThemeConfig = {
   logo: () => <Logo />,
   head: () => (
     <>
-      <script defer src="https://analytics.secnex.io/script.js" data-website-id="91699484-47b9-412c-88f6-109f96989f39"></script>
+      <script defer src="https://analytics.secnex.io/script.js" data-website-id="17f3f47f-58af-45da-8a72-ad3dd4a663f1"></script>
     </>
   ),
   useNextSeoProps: () => ({
