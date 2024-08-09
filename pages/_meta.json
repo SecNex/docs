@@ -43,6 +43,10 @@
       "microsoft-teams": {
         "title": "Microsoft Teams",
         "href": "/tb/microsoft-teams"
+      },
+      "ps-collection": {
+        "title": "PowerShell Collection",
+        "href": "/tb/ps"
       }
     }
   }

@@ -1,0 +1,34 @@
+# App Gateway
+
+Our own app or api gateway is a very secure and efficient way to manage our applications and APIs. It is a single entry point for all our applications and APIs. It is a reverse proxy that routes requests to the appropriate backend service based on the request URL. It is also a security layer that protects our applications and APIs from unauthorized access.
+The app gateway is written in Golang and uses a PostgreSQL database to store configuration data. It is designed to be highly available and scalable, with support for multiple instances running in parallel.
+
+## Quick Start
+
+In the future we will provide a quick start guide to help you get started with the app gateway.
+
+But currently a productive build is not available for the public.
+
+## Features
+
+### Security
+
+- Authentication
+- Rate limiting
+- IP whitelisting and blacklisting**
+- Method whitelisting and blacklisting**
+- User agent whitelisting and blacklisting**
+- Limiting request body size
+
+### Monitoring and logging
+
+This feature will coming soon.
+
+- Request logging
+- Error logging
+- Metrics collection
+- Health checks
+
+###  High Availability
+
+The app gateway is designed to be highly available, with support for multiple instances running in parallel. This ensures that our applications and APIs are always accessible, even if one instance fails. You can use a load balancer to distribute incoming requests across multiple instances of the app gateway, ensuring that no single point of failure exists.

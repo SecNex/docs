@@ -7,5 +7,6 @@
     "--- Security": {
         "title": "Security",
         "type": "separator"
-    }
+    },
+    "app-gateway": "App Gateway"
 }

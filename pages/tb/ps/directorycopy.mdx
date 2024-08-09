@@ -1,0 +1,98 @@
+# DirectoryCopy
+
+This module will copy a directory from one location to another. It will copy every file separately, so if you have a directory with a lot of files, it will take a while, but after the copy is done, you have a list of all the files that were copied and the ones that failed. Very helpful for backup or DRP (Disaster Recovery Plan) for a directory.
+
+## Installation
+
+```powershell copy
+Import-Module -Name /path/to/DirectoryCopy
+```
+
+## Usage
+
+```powershell copy filename="Example.ps1" showLineNumbers
+$files = Get-DirectoryFiles -Path "..\secnex-auth-api\src"
+Write-Host "Found $($files.Count) objects to copy!"
+$result = Copy-Objects -CopyObjects $files -Destination "backup"
+$failed = $result | Where-Object { $_.Success -eq $false }
+$success = $result | Where-Object { $_.Success -eq $true }
+Show-Results -Results $result
+if ($failed.Count -gt 0) {
+    Write-Host "Failed to copy $($failed.Count) objects!"
+}
+if ($success.Count -gt 0) {
+    Write-Host "Successfully copied $($success.Count) objects!"
+}
+```
+
+## Functions
+
+- `Get-DirectoryFiles`: Get a list of files in a directory.
+- `Copy-Objects`: Copy a list of files to a destination directory.
+- `Show-Results`: Show the results of the copy operation.
+
+## Parameters
+
+### Get-DirectoryFiles
+
+- `-Path`: The path to the directory you want to copy.
+
+### Copy-Objects
+
+- `-CopyObjects`: The list of files to copy.
+- `-Destination`: The destination directory where the files should be copied.
+
+### Show-Results
+
+- `-Results`: The results of the copy operation.
+
+## Output
+
+```plaintext
+Found 28 objects to copy!
+                                                                                                                        
+RelativePath            Success IsDirectory FullName                                                            Hash
+------------            ------- ----------- --------                                                            ----
+/api                       True        True /Users/secnex/Projects/secnex-auth-api/src/api                    
+/api/api.go                True       False /Users/secnex/Projects/secnex-auth-api/src/api/api.go               08CCE8FF658D0A8B595D7C8281C32A383D6538D10FD1EC03D5D50030A6AB4773
+/api/middleware            True        True /Users/secnex/Projects/secnex-auth-api/src/api/middleware         
+/api/middleware/auth.go    True       False /Users/secnex/Projects/secnex-auth-api/src/api/middleware/auth.go   97DE49999AC9B21770A4A53BC5BA9BF0A609631E37944F9D235296C51EFF1C0F
+/api/res                   True        True /Users/secnex/Projects/secnex-auth-api/src/api/res                
+/api/res/result.go         True       False /Users/secnex/Projects/secnex-auth-api/src/api/res/result.go        D59BF2C1CACFA65DA98BC123CF981DC6BEE4BD511A5F8128DB55B55132A76B84
+/api/routes                True        True /Users/secnex/Projects/secnex-auth-api/src/api/routes             
+/api/routes/auth.go        True       False /Users/secnex/Projects/secnex-auth-api/src/api/routes/auth.go       C2EEA538E18C4B0E951BDC6AD1730D25ABC89BAB67F9E5D51FC2392CEC1ADA5F
+/api/routes/health.go      True       False /Users/secnex/Projects/secnex-auth-api/src/api/routes/health.go     6200D6EBBFB88F01410421DB5968B36B12CFF4042CAE32604F2729F39AD8993B
+/api/routes/main.go        True       False /Users/secnex/Projects/secnex-auth-api/src/api/routes/main.go       3AB4F5035760307B2F17BF3213B8A64E6853A47945DAB251ED2400B433C33479
+/api/routes/user.go        True       False /Users/secnex/Projects/secnex-auth-api/src/api/routes/user.go       85CBA4C70DBB721A6C9B69731B956FD38625C3DD3F2A3539529F4C0C5754C0AF
+/auth                      True        True /Users/secnex/Projects/secnex-auth-api/src/auth                   
+/auth/auth.go              True       False /Users/secnex/Projects/secnex-auth-api/src/auth/auth.go             9CAD6B41AE6A2E2A9C01DCB974212059B02440F3502653C7D5FF524FFB6AADF0
+/auth/hash.go              True       False /Users/secnex/Projects/secnex-auth-api/src/auth/hash.go             48A3F966F9A0D434109ABDF16B84BB0DC6BC0D25CDCC85AB58B09FEBA67B59E2
+/auth/utils.go             True       False /Users/secnex/Projects/secnex-auth-api/src/auth/utils.go            1018740A5C9F1F46EFCF185D311764770C1640E70B76DD52ED18E928B44FFC8D
+/db                        True        True /Users/secnex/Projects/secnex-auth-api/src/db                     
+/db/cnx.go                 True       False /Users/secnex/Projects/secnex-auth-api/src/db/cnx.go                93376AA82D591CE8C23671DD2E6DBADCE8126A089A284D8F2055AD488539EC98
+/db/db.go                  True       False /Users/secnex/Projects/secnex-auth-api/src/db/db.go                 27448110EC4C59B1A5039D09208FE1E283630D5F2DDA36AA7B11AE250C2B576B
+/gateway.pub               True       False /Users/secnex/Projects/secnex-auth-api/src/gateway.pub              8D0684A71EE50D5D52904E9FD48A33C8E0583BDAE80906ABFB5FD9141935FAC5
+/go.mod                    True       False /Users/secnex/Projects/secnex-auth-api/src/go.mod                   8732A82A927203ED6E925170CA52CCE9919E22C7F2A9508C7AB0299ABD8BC456
+/go.sum                    True       False /Users/secnex/Projects/secnex-auth-api/src/go.sum                   005A2B241FC2F3C11300759FC3B59FF3A6DC7B68F9DD2C63A7D483075F9441FF
+/main.go                   True       False /Users/secnex/Projects/secnex-auth-api/src/main.go                  53864196879360EA28F7488A009E1739A9131AD5651CEBC4107DB0CBF5E9B3E8
+/models                    True        True /Users/secnex/Projects/secnex-auth-api/src/models                 
+/models/client.go          True       False /Users/secnex/Projects/secnex-auth-api/src/models/client.go         93F1C1F2A3C119C4B546F132740C858EA777DE087A920995E7D2AEE742286996
+/models/user.go            True       False /Users/secnex/Projects/secnex-auth-api/src/models/user.go           21A809BC2898CC7030DB9C230AA5412CED8AD920EA02CE72E99DC2D2574E8D7A
+/models/utils.go           True       False /Users/secnex/Projects/secnex-auth-api/src/models/utils.go          4F862A1044D7AE6CE7066DE735C1A96E69BE126AB9717F172FEE093EAC36CADA
+/security                  True        True /Users/secnex/Projects/secnex-auth-api/src/security               
+/security/sign.go          True       False /Users/secnex/Projects/secnex-auth-api/src/security/sign.go         CA9AA19374FD146D5C432D7C38A8FBC543548EF601CDE8CAB8B461C8612BC584
+ 
+Successfully copied 28 objects!
+```
+
+## Possible Use Cases
+
+- Backup or DRP (Disaster Recovery Plan) for a directory.
+- Copying files from one location to another.
+- Archiving files.
+
+## FAQ
+
+**What happens when the object exists already?**
+
+When the object exists already, the script skips the object and continues with the next object. In the result table, you can see that the object was marked as failed because it was skipped.

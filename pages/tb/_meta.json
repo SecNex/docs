@@ -3,9 +3,15 @@
         "title": "Toolbox",
         "type": "separator"
     },
+    "index": "Introduction",
     "--- Microsoft": {
         "title": "Microsoft",
         "type": "separator"
     },
-    "microsoft-teams": "Microsoft Teams"
+    "microsoft-teams": "Microsoft Teams",
+    "--- Collections": {
+        "title": "Collections",
+        "type": "separator"
+    },
+    "ps": "PS.Collection"
 }
