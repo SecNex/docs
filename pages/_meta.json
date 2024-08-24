@@ -3,36 +3,18 @@
     "title": "Home",
     "type": "page"
   },
-  "edgesight": {
-    "title": "EdgeSight",
-    "type": "page",
-    "display": "hidden"
-  },
-  "zerorest": {
-    "title": "ZeroRest",
-    "type": "page",
-    "display": "hidden"
-  },
   "tb": {
     "title": "Toolbox",
     "type": "page",
     "display": "hidden"
   },
-  "suite": {
-    "title": "Suite",
-    "type": "page"
-  },
   "solutions": {
     "title": "Solutions",
     "type": "menu",
     "items": {
-      "edgesight": {
-        "title": "EdgeSight",
-        "href": "/edgesight"
-      },
-      "zerorest": {
-        "title": "ZeroRest",
-        "href": "/zerorest"
+      "pwexchange": {
+        "title": "PwExchange",
+        "href": "/solutions/pwexchange"
       }
     }
   },

@@ -1,12 +1,12 @@
 {
-    "--- ZeroRest": {
-        "title": "ZeroRest",
+    "--- Suite": {
+        "title": "SecNex Suite",
         "type": "separator"
     },
     "index": "Introduction",
-    " --- ZeroRest Security": {
+    "--- Security": {
         "title": "Security",
         "type": "separator"
     },
-    "auth": "Authentication"
+    "pwexchange": "Password Exchange"
 }

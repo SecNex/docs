@@ -1,0 +1,9 @@
+# Password Exchange
+
+**PwExchange** is a simple password exchange tool that allows you to share passwords with your friends or colleagues in a secure way. The tool uses a symmetric encryption algorithm to encrypt the password and then sends it to the recipient. The recipient can then decrypt the password using the same tool for one-time use.
+
+## Encryption Algorithm
+
+The tool uses `argon2` for key derivation and `AES` for encryption. Each secret is encrypted with a unique key. We use a server side key, a random client secret, and a random salt to derive the key. The key is then used to encrypt the secret.
+
+**Only with this three keys, the secret can be decrypted.**
