@@ -3,8 +3,13 @@
     "title": "Home",
     "type": "page"
   },
+  "concepts": {
+    "title": "Concepts",
+    "type": "page"
+  },
   "tb": {
     "title": "Toolbox",
+
     "type": "page",
     "display": "hidden"
   },

@@ -1,0 +1,12 @@
+{
+    "--- Concepts": {
+        "title": "Concepts",
+        "type": "separator"
+    },
+    "index": "About Concepts",
+    "--- Microsoft": {
+        "title": "Microsoft",
+        "type": "separator"
+    },
+    "microsoft-powerplatform": "Power Platform"
+}
