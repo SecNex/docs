@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next';
 import Script from 'next/script'
+import { useRouter } from 'next/router'
 
 import { DocsThemeConfig, Tabs, Tab } from 'nextra-theme-docs';
 
@@ -13,9 +14,14 @@ const config: DocsThemeConfig = {
       <script defer src="https://analytics.secnex.io/script.js" data-website-id="784e2823-d09f-4153-a410-2ec0d04a750b"></script>
     </>
   ),
-  useNextSeoProps: () => ({
-    titleTemplate: '%s - SecNex',
-  }),
+  useNextSeoProps() {
+    const { asPath } = useRouter()
+    if (asPath !== '/') {
+      return {
+        titleTemplate: '%s – SecNex',
+      }
+    }
+  },
   project: {
     link: 'https://github.com/secnex',
   },
@@ -65,7 +71,7 @@ const config: DocsThemeConfig = {
       )
     }
   },
-  search: {}
+  search: {},
 }
 
 export default config
