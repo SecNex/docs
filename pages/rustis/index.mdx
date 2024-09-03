@@ -9,7 +9,7 @@ Welcome to the documentation for **Rustis**! This project aims to provide a Redi
 ### Main Components
 
 1. **Database**:
-   - The database is an in-memory [`HashMap`](command:_github.copilot.openSymbolFromReferences?%5B%22HashMap%22%2C%5B%7B%22uri%22%3A%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22%2FUsers%2Fbbenouarets%2FProjects%2Fsecnex%2Frustis%2Fsrc%2Fhandler.rs%22%2C%22external%22%3A%22file%3A%2F%2F%2FUsers%2Fbbenouarets%2FProjects%2Fsecnex%2Frustis%2Fsrc%2Fhandler.rs%22%2C%22path%22%3A%22%2FUsers%2Fbbenouarets%2FProjects%2Fsecnex%2Frustis%2Fsrc%2Fhandler.rs%22%2C%22scheme%22%3A%22file%22%7D%2C%22pos%22%3A%7B%22line%22%3A0%2C%22character%22%3A22%7D%7D%5D%5D "Go to definition") protected by a [`Mutex`](command:_github.copilot.openSymbolFromReferences?%5B%22Mutex%22%2C%5B%7B%22uri%22%3A%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22%2FUsers%2Fbbenouarets%2FProjects%2Fsecnex%2Frustis%2Fsrc%2Fhandler.rs%22%2C%22external%22%3A%22file%3A%2F%2F%2FUsers%2Fbbenouarets%2FProjects%2Fsecnex%2Frustis%2Fsrc%2Fhandler.rs%22%2C%22path%22%3A%22%2FUsers%2Fbbenouarets%2FProjects%2Fsecnex%2Frustis%2Fsrc%2Fhandler.rs%22%2C%22scheme%22%3A%22file%22%7D%2C%22pos%22%3A%7B%22line%22%3A1%2C%22character%22%3A21%7D%7D%5D%5D "Go to definition").
+   - The database is an in-memory `HashMap` protected by a `Mutex`.
    - Type aliases are used to simplify complex types.
 
 2. **TCP Server**:
@@ -50,7 +50,7 @@ The architecture of **Rustis** is modular to ensure maintainability and extensib
 
 ### Example Code Snippet
 
-Here is an excerpt from [`handler.rs`](command:_github.copilot.openRelativePath?%5B%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2FUsers%2Fbbenouarets%2FProjects%2Fsecnex%2Frustis%2Fsrc%2Fhandler.rs%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%5D "/Users/bbenouarets/Projects/secnex/rustis/src/handler.rs") that demonstrates how the server processes incoming commands:
+Here is an excerpt from `handler.rs` that demonstrates how the server processes incoming commands:
 
 ```rust
 use std::collections::HashMap;
