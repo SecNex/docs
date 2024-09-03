@@ -1,1 +1,20 @@
 # GET
+
+Get the value of key. If the key does not exist the special value nil is returned. An error is returned if the value stored at key is not a string, because GET only handles string values.
+
+## Syntax
+
+```bash
+GET key
+```
+
+## Examples
+
+```bash
+redis> GET nonexisting
+(nil)
+redis> SET mykey "Hello"
+"OK"
+redis> GET mykey
+"Hello"
+```

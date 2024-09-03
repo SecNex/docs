@@ -1,0 +1,22 @@
+# DECR
+
+Decrements the number stored at key by one. If the key does not exist, it is set to 0 before performing the operation. An error is returned if the key contains a value of the wrong type or contains a string that can not be represented as integer. This operation is limited to 64 bit signed integers.
+
+## Syntax
+
+```bash
+DECR key
+```
+
+## Examples
+
+```bash
+redis> SET mykey "10"
+OK
+redis> DECR mykey
+(integer) 9
+redis> GET mykey
+"9"
+redis> INCR mykey
+(integer) 10
+```

@@ -9,5 +9,7 @@
         "type": "separator"
     },
     "get": "GET",
-    "set": "SET"
+    "set": "SET",
+    "incr": "INCR",
+    "decr": "DECR"
 }
