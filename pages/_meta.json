@@ -9,7 +9,11 @@
   },
   "tb": {
     "title": "Toolbox",
-
+    "type": "page",
+    "display": "hidden"
+  },
+  "rustis": {
+    "title": "Rustis",
     "type": "page",
     "display": "hidden"
   },
@@ -20,6 +24,10 @@
       "pwexchange": {
         "title": "PwExchange",
         "href": "/solutions/pwexchange"
+      },
+      "rustis": {
+        "title": "Rustis",
+        "href": "/rustis"
       }
     }
   },

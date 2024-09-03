@@ -1,0 +1,13 @@
+{
+    "--- Rustis": {
+        "title": "Rustis",
+        "type": "separator"
+    },
+    "index": "Introduction",
+    "--- Functions": {
+        "title": "Functions",
+        "type": "separator"
+    },
+    "get": "GET",
+    "set": "SET"
+}
