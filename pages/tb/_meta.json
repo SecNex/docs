@@ -8,10 +8,5 @@
         "title": "Microsoft",
         "type": "separator"
     },
-    "microsoft-teams": "Microsoft Teams",
-    "--- Collections": {
-        "title": "Collections",
-        "type": "separator"
-    },
-    "ps": "PS.Collection"
+    "microsoft-teams": "Microsoft Teams"
 }

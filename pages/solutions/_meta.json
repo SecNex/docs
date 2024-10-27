@@ -8,5 +8,10 @@
         "title": "Security",
         "type": "separator"
     },
-    "pwexchange": "Password Exchange"
+    "pwexchange": "Password Exchange",
+    "--- Development": {
+        "title": "Development",
+        "type": "separator"
+    },
+    "weeserver": "WeeServer"
 }

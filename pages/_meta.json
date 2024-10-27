@@ -28,6 +28,10 @@
       "rustis": {
         "title": "Rustis",
         "href": "/rustis"
+      },
+      "weeserver": {
+        "title": "WeeServer",
+        "href": "/solutions/weeserver"
       }
     }
   },
@@ -38,10 +42,6 @@
       "microsoft-teams": {
         "title": "Microsoft Teams",
         "href": "/tb/microsoft-teams"
-      },
-      "ps-collection": {
-        "title": "PowerShell Collection",
-        "href": "/tb/ps"
       }
     }
   }
