@@ -1,0 +1,200 @@
+# SecNex CLI Command Reference
+
+## Global Options
+
+All commands support the following global options:
+
+- `--url`: API URL (default: https://api.secnex.de)
+- `--version`: API version (default: v1)
+- `-h, --help`: Show help message
+
+## Commands
+
+### Configuration Management
+
+#### Create Configuration
+
+```bash
+secnex config create --client-id "your-client-id" --client-secret "your-client-secret"
+```
+
+Creates a new encrypted configuration file with client credentials.
+
+#### Show Configuration
+
+```bash
+secnex config show
+```
+
+Displays the current configuration (excluding sensitive data).
+
+#### Show Token Information
+
+```bash
+secnex config show-token
+```
+
+Displays information about the current access token.
+
+### Authentication
+
+#### Login
+
+```bash
+secnex login --email "user@example.com" --password "password"
+```
+
+Authenticates with the SecNex API and stores the access token.
+
+#### Logout
+
+```bash
+secnex logout
+```
+
+Clears the stored access token.
+
+### User Management
+
+#### List Users
+
+```bash
+secnex user list
+```
+
+Lists all users in the system.
+
+#### Create User
+
+```bash
+secnex user create --username "username" --email "user@example.com" --password "password" --first-name "First" --last-name "Last"
+```
+
+Creates a new user with the specified details.
+
+Required arguments:
+
+- `--username`: Username for the new user
+- `--email`: Email address for the new user
+- `--password`: Password for the new user
+- `--first-name`: First name of the user
+- `--last-name`: Last name of the user
+
+#### Search Users
+
+```bash
+secnex user search --attribute email --value "user@example.com"
+```
+
+Searches for users by attribute and value.
+
+Required arguments:
+
+- `--attribute`: Attribute to search for (e.g., email, username)
+- `--value`: Value to search for
+
+#### Disable User
+
+```bash
+secnex user disable --user-id "user-id"
+```
+
+Disables a user account.
+
+Required arguments:
+
+- `--user-id`: ID of the user to disable
+
+#### Enable User
+
+```bash
+secnex user enable --user-id "user-id"
+```
+
+Enables a disabled user account.
+
+Required arguments:
+
+- `--user-id`: ID of the user to enable
+
+#### Change Password
+
+```bash
+secnex user change-password --user-id "user-id" --password "new-password"
+```
+
+Changes a user's password.
+
+Required arguments:
+
+- `--user-id`: ID of the user
+- `--password`: New password
+
+#### Delete User
+
+```bash
+secnex user delete --user-id "user-id"
+```
+
+Deletes a user account.
+
+Required arguments:
+
+- `--user-id`: ID of the user to delete
+
+## Examples
+
+### Basic Workflow
+
+```bash
+# Configure client credentials
+secnex config create --client-id "abc123" --client-secret "xyz789"
+
+# Login
+secnex login --email "admin@example.com" --password "secure123"
+
+# Create a new user
+secnex user create --username "john.doe" --email "john@example.com" --password "pass123" --first-name "John" --last-name "Doe"
+
+# List all users
+secnex user list
+
+# Search for a specific user
+secnex user search --attribute email --value "john@example.com"
+
+# Logout
+secnex logout
+```
+
+### User Management
+
+```bash
+# Disable a user
+secnex user disable --user-id "user123"
+
+# Change user's password
+secnex user change-password --user-id "user123" --password "newpass456"
+
+# Enable a user
+secnex user enable --user-id "user123"
+
+# Delete a user
+secnex user delete --user-id "user123"
+```
+
+## Error Handling
+
+The CLI provides clear error messages for common scenarios:
+
+- Invalid credentials
+- Missing required arguments
+- API errors
+- Network issues
+- Token expiration
+
+## Security Notes
+
+- All sensitive data (tokens, credentials) is stored encrypted
+- Passwords are never displayed in logs or output
+- Tokens are automatically renewed when they expire
+- Invalid tokens trigger automatic logout

@@ -1,17 +1,22 @@
 {
-    "--- Suite": {
-        "title": "SecNex Suite",
-        "type": "separator"
-    },
-    "index": "Introduction",
-    "--- Security": {
-        "title": "Security",
-        "type": "separator"
-    },
-    "pwexchange": "Password Exchange",
-    "--- Development": {
-        "title": "Development",
-        "type": "separator"
-    },
-    "weeserver": "WeeServer"
+	"--- Suite": {
+		"title": "SecNex Suite",
+		"type": "separator"
+	},
+	"index": "Introduction",
+	"--- Security": {
+		"title": "Security",
+		"type": "separator"
+	},
+	"pwexchange": "Password Exchange",
+	"--- Development": {
+		"title": "Development",
+		"type": "separator"
+	},
+	"weeserver": "WeeServer",
+	"--- Clients": {
+		"title": "Clients",
+		"type": "separator"
+	},
+	"pysecnex": "PySecNex"
 }

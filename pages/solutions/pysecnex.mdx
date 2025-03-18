@@ -1,0 +1,136 @@
+# PySecNex - Python Client
+
+A Python client for the SecNex API with CLI tool.
+
+## Installation
+
+```bash
+pip install secnex
+```
+
+## Usage as CLI Tool
+
+### Configuration
+
+First, you need to configure your client credentials:
+
+```bash
+secnex config create --client-id "your-client-id" --client-secret "your-client-secret"
+```
+
+### Login
+
+```bash
+secnex login --email "user@example.com" --password "password"
+```
+
+### User Management
+
+List users:
+
+```bash
+secnex user list
+```
+
+Create user:
+
+```bash
+secnex user create --username "username" --email "user@example.com" --password "password" --first-name "First" --last-name "Last"
+```
+
+Search users:
+
+```bash
+secnex user search --attribute email --value "user@example.com"
+```
+
+Disable user:
+
+```bash
+secnex user disable --user-id "user-id"
+```
+
+Enable user:
+
+```bash
+secnex user enable --user-id "user-id"
+```
+
+Change password:
+
+```bash
+secnex user change-password --user-id "user-id" --password "new-password"
+```
+
+Delete user:
+
+```bash
+secnex user delete --user-id "user-id"
+```
+
+### Token Management
+
+Show token information:
+
+```bash
+secnex config show-token
+```
+
+### Logout
+
+```bash
+secnex logout
+```
+
+## Usage as Python Library
+
+```python
+from pysecnex.client import Client
+
+# Initialize client
+client = Client("client-id", "client-secret")
+
+# Login
+token = client.login("user@example.com", "password")
+
+# List users
+users = client.get_users()
+
+# Search users
+users = client.search_user("email", "user@example.com")
+
+# Create user
+user = client.create_user(
+    username="username",
+    email="user@example.com",
+    password="password",
+    first_name="First",
+    last_name="Last"
+)
+
+# Disable user
+client.disable_user("user-id")
+
+# Enable user
+client.enable_user("user-id")
+
+# Change password
+client.change_password("user-id", "new-password")
+
+# Delete user
+client.delete_user("user-id")
+
+# Logout
+client.logout()
+```
+
+## Security
+
+- All tokens are stored encrypted
+- Configuration data is stored encrypted
+- Tokens are automatically renewed when they expire
+- Automatic logout on invalid tokens
+
+## License
+
+MIT License

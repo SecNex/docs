@@ -1,48 +1,52 @@
 {
-  "index": {
-    "title": "Home",
-    "type": "page"
-  },
-  "concepts": {
-    "title": "Concepts",
-    "type": "page"
-  },
-  "tb": {
-    "title": "Toolbox",
-    "type": "page",
-    "display": "hidden"
-  },
-  "rustis": {
-    "title": "Rustis",
-    "type": "page",
-    "display": "hidden"
-  },
-  "solutions": {
-    "title": "Solutions",
-    "type": "menu",
-    "items": {
-      "pwexchange": {
-        "title": "PwExchange",
-        "href": "/solutions/pwexchange"
-      },
-      "rustis": {
-        "title": "Rustis",
-        "href": "/rustis"
-      },
-      "weeserver": {
-        "title": "WeeServer",
-        "href": "/solutions/weeserver"
-      }
-    }
-  },
-  "toolbox": {
-    "title": "Toolbox",
-    "type": "menu",
-    "items": {
-      "microsoft-teams": {
-        "title": "Microsoft Teams",
-        "href": "/tb/microsoft-teams"
-      }
-    }
-  }
+	"index": {
+		"title": "Home",
+		"type": "page"
+	},
+	"concepts": {
+		"title": "Concepts",
+		"type": "page"
+	},
+	"tb": {
+		"title": "Toolbox",
+		"type": "page",
+		"display": "hidden"
+	},
+	"rustis": {
+		"title": "Rustis",
+		"type": "page",
+		"display": "hidden"
+	},
+	"solutions": {
+		"title": "Solutions",
+		"type": "menu",
+		"items": {
+			"python-client": {
+				"title": "PySecNex",
+				"href": "/solutions/pysecnex"
+			},
+			"pwexchange": {
+				"title": "PwExchange",
+				"href": "/solutions/pwexchange"
+			},
+			"weeserver": {
+				"title": "WeeServer",
+				"href": "/solutions/weeserver"
+			},
+			"rustis": {
+				"title": "Rustis",
+				"href": "/rustis"
+			}
+		}
+	},
+	"toolbox": {
+		"title": "Toolbox",
+		"type": "menu",
+		"items": {
+			"microsoft-teams": {
+				"title": "Microsoft Teams",
+				"href": "/tb/microsoft-teams"
+			}
+		}
+	}
 }
