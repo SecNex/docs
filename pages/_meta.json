@@ -25,6 +25,10 @@
 				"title": "PySecNex",
 				"href": "/solutions/pysecnex"
 			},
+			"api-gateway": {
+				"title": "API Gateway",
+				"href": "/solutions/api-gateway"
+			},
 			"pwexchange": {
 				"title": "PwExchange",
 				"href": "/solutions/pwexchange"
@@ -36,6 +40,10 @@
 			"rustis": {
 				"title": "Rustis",
 				"href": "/rustis"
+			},
+			"meetiqo-ai": {
+				"title": "Meetiqo AI",
+				"href": "/solutions/meetiqo-ai"
 			}
 		}
 	},

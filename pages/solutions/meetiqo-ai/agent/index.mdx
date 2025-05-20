@@ -1,0 +1,48 @@
+import { Steps } from "nextra/components";
+
+# Meetiqo AI Agent
+
+_This is the agent for the Meetiqo AI powered by OpenAI's GPT-4o-mini and made by [SecNex](https://secnex.io)._
+
+## Architecture
+
+- S3-compatible storage to store the audio files
+- Postgres database to store the summary of the audio files
+- RabbitMQ to queue the audio files for transcription
+- OpenAI Whisper API to transcribe the audio files
+- OpenAI Assistant API to generate the summary of the audio files
+- Python component to watch the RabbitMQ queue and process the audio files
+
+## Features
+
+- Transcription of the audio files
+- Summary of the audio files
+
+## How to use
+
+<Steps>
+### Clone the repository
+ 
+Clone the repository from the [GitHub repository](https://github.com/SecNex/meetiqo-ai-agent).
+ 
+### Install the dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Configure the environment variables
+
+Copy the `.env.example` file to `.env` and configure the environment variables.
+
+```bash
+cp .env.example .env
+```
+
+### Run the application
+
+```bash
+python src/meetiqo-ai-agent/index.py
+```
+
+</Steps>

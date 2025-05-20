@@ -4,10 +4,16 @@
 		"type": "separator"
 	},
 	"index": "Introduction",
+	"--- AI": {
+		"title": "AI",
+		"type": "separator"
+	},
+	"meetiqo-ai": "Meetiqo AI",
 	"--- Security": {
 		"title": "Security",
 		"type": "separator"
 	},
+	"api-gateway": "API Gateway",
 	"pwexchange": "Password Exchange",
 	"--- Development": {
 		"title": "Development",
