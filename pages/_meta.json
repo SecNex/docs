@@ -56,5 +56,15 @@
 				"href": "/tb/microsoft-teams"
 			}
 		}
+	},
+	"packages": {
+		"title": "Packages",
+		"type": "menu",
+		"items": {
+			"python": {
+				"title": "Python",
+				"href": "/packages/python"
+			}
+		}
 	}
 }

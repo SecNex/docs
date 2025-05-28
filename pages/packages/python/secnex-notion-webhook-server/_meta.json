@@ -1,0 +1,8 @@
+{
+	"--- Examples": {
+		"title": "Examples",
+		"type": "separator"
+	},
+	"example1": "Only Webhook Handler",
+	"example2": "Extended Webhook Server"
+}

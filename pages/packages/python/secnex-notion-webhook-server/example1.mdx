@@ -1,0 +1,18 @@
+# Only Webhook Handler
+
+This example shows how to use the `WebhookServer` class to start a webhook server.
+
+## Usage
+
+```python
+from notion_webhook.server import WebhookServer
+
+server = WebhookServer()
+server.start()
+```
+
+## Test
+
+```bash
+curl -X POST http://localhost:8000/webhook?token=1234567890 -H "Content-Type: application/json" -d '{"event":"page_viewed","data":{"page_id":"1234567890"}}'
+```

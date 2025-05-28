@@ -1,0 +1,34 @@
+# Extended Webhook Server
+
+## Usage
+
+```python
+from notion_webhook.server import Server, Handler, WebhookHandler
+from notion_webhook.db import TokenDatabase
+
+db = TokenDatabase()
+
+if db.check_first_run():
+    token_id, token = db.create_token()
+    print(token)
+
+handler = Handler(WebhookHandler(db).webhook_handler)
+
+handlers = {
+    "/webhook": handler
+}
+
+server = Server(
+    addr=os.getenv("HOST", "0.0.0.0"),
+    port=int(os.getenv("PORT", 8000)),
+    handlers=handlers,
+    app_name=os.getenv("APP_NAME", "NotionWebhookServer")
+)
+server.start()
+```
+
+## Test
+
+```bash
+curl -X POST http://localhost:8000/webhook?token=1234567890 -H "Content-Type: application/json" -d '{"event":"page_viewed","data":{"page_id":"1234567890"}}'
+```
