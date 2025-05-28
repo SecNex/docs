@@ -1,0 +1,45 @@
+# Blocks
+
+A block is a single unit of content in Notion. It can be a paragraph, a heading, a callout, a code block, an image, a video, a file, a to-do, a toggle, a table, or a divider.
+
+## Supported Blocks
+
+- [x] Paragraph
+- [x] Callout
+- [x] Headings
+- [x] Code
+- [ ] Image
+- [ ] Video
+- [ ] File
+- [ ] To-do
+- [ ] Toggle
+- [ ] Table
+- [ ] Divider
+
+### Paragraph
+
+```python
+Components.Paragraph(text=["Hello, world!"])
+```
+
+### Heading
+
+```python
+Components.Heading(text=["Hello, world!"], level=1)
+```
+
+### Callout
+
+```python
+Components.Callout(text=["Hello, world!"], icon="👋", color="default")
+```
+
+### Code
+
+```python
+code = """
+print("Hello, world!")
+"""
+
+Components.Code(text=code, language="python", caption="Hello, world!")
+```

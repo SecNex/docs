@@ -1,0 +1,12 @@
+{
+	"--- Features": {
+		"title": "Features",
+		"type": "separator"
+	},
+	"blocks": "Blocks",
+	"--- Examples": {
+		"title": "Examples",
+		"type": "separator"
+	},
+	"example": "Quick Start"
+}

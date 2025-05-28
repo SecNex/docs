@@ -66,5 +66,10 @@
 				"href": "/packages/python"
 			}
 		}
+	},
+	"sdk": {
+		"title": "SDK",
+		"type": "menu",
+		"items": {}
 	}
 }
