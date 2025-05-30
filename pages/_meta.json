@@ -3,17 +3,18 @@
 		"title": "Home",
 		"type": "page"
 	},
-	"concepts": {
-		"title": "Concepts",
-		"type": "page"
-	},
-	"tb": {
-		"title": "Toolbox",
+	"notion-backup": {
+		"title": "Notion Backup",
 		"type": "page",
 		"display": "hidden"
 	},
-	"rustis": {
-		"title": "Rustis",
+	"teams-webhook-finder": {
+		"title": "Teams Webhook Finder",
+		"type": "page",
+		"display": "hidden"
+	},
+	"weeserver": {
+		"title": "WeeServer",
 		"type": "page",
 		"display": "hidden"
 	},
@@ -21,39 +22,17 @@
 		"title": "Solutions",
 		"type": "menu",
 		"items": {
-			"python-client": {
-				"title": "PySecNex",
-				"href": "/solutions/pysecnex"
-			},
-			"api-gateway": {
-				"title": "API Gateway",
-				"href": "/solutions/api-gateway"
-			},
-			"pwexchange": {
-				"title": "PwExchange",
-				"href": "/solutions/pwexchange"
-			},
 			"weeserver": {
 				"title": "WeeServer",
-				"href": "/solutions/weeserver"
+				"href": "/weeserver"
 			},
-			"rustis": {
-				"title": "Rustis",
-				"href": "/rustis"
+			"notion-backup": {
+				"title": "Notion Backup",
+				"href": "/notion-backup"
 			},
-			"meetiqo-ai": {
-				"title": "Meetiqo AI",
-				"href": "/solutions/meetiqo-ai"
-			}
-		}
-	},
-	"toolbox": {
-		"title": "Toolbox",
-		"type": "menu",
-		"items": {
-			"microsoft-teams": {
-				"title": "Microsoft Teams",
-				"href": "/tb/microsoft-teams"
+			"teams-webhook-finder": {
+				"title": "Teams Webhook Finder",
+				"href": "/teams-webhook-finder"
 			}
 		}
 	},
@@ -66,10 +45,5 @@
 				"href": "/packages/python"
 			}
 		}
-	},
-	"sdk": {
-		"title": "SDK",
-		"type": "menu",
-		"items": {}
 	}
 }

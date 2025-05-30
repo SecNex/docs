@@ -1,4 +1,13 @@
 {
+	"--- Python": {
+		"title": "Python",
+		"type": "separator"
+	},
+	"index": "Overview",
+	"--- Packages": {
+		"title": "Packages",
+		"type": "separator"
+	},
 	"secnex-notion-api": "Notion API",
 	"secnex-notion-webhook-server": "Notion Webhook Server"
 }

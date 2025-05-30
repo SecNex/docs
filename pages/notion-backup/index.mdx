@@ -1,0 +1,105 @@
+import { Callout } from "nextra/components";
+import { Steps } from "nextra/components";
+import { Tabs } from "nextra/components";
+
+# Notion Backup
+
+<Callout
+	type="default"
+	emoji="💡"
+>
+	This tool is a work in progress. It is not yet ready for production use, but
+	you can use it to backup your Notion databases and pages to a local directory.
+</Callout>
+
+**Notion Backup** by [SecNex](https://secnex.io) is a tool that allows you to backup your Notion databases and pages to a local directory.
+
+## Features
+
+- [x] Backup your Notion databases and pages to a local directory
+- [ ] Restore your Notion databases and pages from a local directory
+- [ ] Incremental backups
+- [ ] Scheduled backups
+- [ ] Email notifications
+- [ ] Webhook notifications
+- [ ] Web UI
+- [ ] CLI
+- [ ] API
+- [x] Docker
+
+## Installation
+
+<Steps>
+### Download the latest release
+
+```bash
+docker pull ghcr.io/secnex/notion-backup:latest
+```
+
+### Run the container
+
+<Tabs items={["Docker", "Docker Compose"]}>
+	<Tabs.Tab>
+		**Run the container:**
+
+		```bash 
+		docker run -d --name notion-backup \
+			-e NOTION_API_Key=your-notion-token \
+			-e OUTPUT_DIR=/app/output \
+			-e FILTER=your-filter \
+			-v /path/to/data:/app/output \
+			-v /path/to/logs:/app/logs \
+			ghcr.io/secnex/notion-backup:latest 
+		```
+	</Tabs.Tab>
+	<Tabs.Tab>
+		**Docker Compose:**
+
+		```yaml
+		services:
+			notion-backup:
+				container_name: notion-backup
+				image: gcr.io/secnex/notion-backup:latest
+				environment:
+				- FILTER=
+				- NOTION_API_KEY=
+				- OUTPUT_DIR=/app/output
+				volumes:
+				- ./logs:/app/logs
+				- ./output:/app/output
+				restart: unless-stopped
+		```
+
+		**Run the container:**
+
+		```bash
+		docker-compose up -d
+		```
+
+	</Tabs.Tab>
+</Tabs>
+
+### Check the logs
+
+<Tabs items={["Docker", "Docker Compose"]}>
+	<Tabs.Tab>
+		```bash
+		docker logs -f notion-backup
+		```
+	</Tabs.Tab>
+	<Tabs.Tab>
+		```bash
+		docker-compose logs -f
+		```
+	</Tabs.Tab>
+</Tabs>
+
+</Steps>
+
+## Configuration
+
+### Environment Variables
+
+- `NOTION_API_Key`: Your Notion API key.
+- `OUTPUT_DIR`: The directory to save the backups to.
+- `FILTER`: The filter to apply to the backups. `FILTER=Test`: Backup only the database or pages with or starts with the name "Test".
