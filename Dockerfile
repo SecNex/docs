@@ -12,7 +12,7 @@ COPY src/package.json src/pnpm-lock.yaml ./
 RUN pnpm install
 
 # Kopiere den gesamten Quellcode
-COPY src ./
+COPY src/ ./
 
 # Build die Anwendung
 RUN pnpm run build
@@ -35,6 +35,8 @@ RUN pnpm install --prod --frozen-lockfile
 # Kopiere Build-Artefakte und notwendige Dateien
 COPY --from=build /app/.next ./.next
 COPY --from=build /app/public ./public
+COPY --from=build /app/pages ./pages
+COPY --from=build /app/components ./components
 COPY --from=build /app/next.config.js ./
 COPY --from=build /app/theme.config.tsx ./
 COPY --from=build /app/styles ./styles
